@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		372AE83C18D8B77600BBA171 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372AE83B18D8B77600BBA171 /* Foundation.framework */; };
+		372AE86418D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.m in Sources */ = {isa = PBXBuildFile; fileRef = 372AE86318D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		372AE83618D8B77600BBA171 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		372AE83818D8B77600BBA171 /* libLHSKeyboardAdjusting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLHSKeyboardAdjusting.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		372AE83B18D8B77600BBA171 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		372AE83F18D8B77600BBA171 /* LHSKeyboardAdjusting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LHSKeyboardAdjusting-Prefix.pch"; sourceTree = "<group>"; };
+		372AE84918D8B77600BBA171 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		372AE84C18D8B77600BBA171 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		372AE86118D8B7B400BBA171 /* LHSKeyboardAdjusting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSKeyboardAdjusting.h; sourceTree = "<group>"; };
+		372AE86218D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LHSKeyboardAdjustment.h"; sourceTree = "<group>"; };
+		372AE86318D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LHSKeyboardAdjustment.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		372AE83518D8B77600BBA171 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372AE83C18D8B77600BBA171 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		372AE82F18D8B77600BBA171 = {
+			isa = PBXGroup;
+			children = (
+				372AE83D18D8B77600BBA171 /* LHSKeyboardAdjusting */,
+				372AE83A18D8B77600BBA171 /* Frameworks */,
+				372AE83918D8B77600BBA171 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		372AE83918D8B77600BBA171 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				372AE83818D8B77600BBA171 /* libLHSKeyboardAdjusting.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		372AE83A18D8B77600BBA171 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				372AE83B18D8B77600BBA171 /* Foundation.framework */,
+				372AE84918D8B77600BBA171 /* XCTest.framework */,
+				372AE84C18D8B77600BBA171 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		372AE83D18D8B77600BBA171 /* LHSKeyboardAdjusting */ = {
+			isa = PBXGroup;
+			children = (
+				372AE83E18D8B77600BBA171 /* Supporting Files */,
+				372AE86118D8B7B400BBA171 /* LHSKeyboardAdjusting.h */,
+				372AE86218D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.h */,
+				372AE86318D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.m */,
+			);
+			path = LHSKeyboardAdjusting;
+			sourceTree = "<group>";
+		};
+		372AE83E18D8B77600BBA171 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				372AE83F18D8B77600BBA171 /* LHSKeyboardAdjusting-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		372AE83718D8B77600BBA171 /* LHSKeyboardAdjusting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372AE85B18D8B77600BBA171 /* Build configuration list for PBXNativeTarget "LHSKeyboardAdjusting" */;
+			buildPhases = (
+				372AE83418D8B77600BBA171 /* Sources */,
+				372AE83518D8B77600BBA171 /* Frameworks */,
+				372AE83618D8B77600BBA171 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LHSKeyboardAdjusting;
+			productName = LHSKeyboardAdjusting;
+			productReference = 372AE83818D8B77600BBA171 /* libLHSKeyboardAdjusting.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		372AE83018D8B77600BBA171 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Lionheart Software LLC";
+			};
+			buildConfigurationList = 372AE83318D8B77600BBA171 /* Build configuration list for PBXProject "LHSKeyboardAdjusting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 372AE82F18D8B77600BBA171;
+			productRefGroup = 372AE83918D8B77600BBA171 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				372AE83718D8B77600BBA171 /* LHSKeyboardAdjusting */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		372AE83418D8B77600BBA171 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372AE86418D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		372AE85918D8B77600BBA171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		372AE85A18D8B77600BBA171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		372AE85C18D8B77600BBA171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/LHSKeyboardAdjusting.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LHSKeyboardAdjusting/LHSKeyboardAdjusting-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		372AE85D18D8B77600BBA171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/LHSKeyboardAdjusting.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LHSKeyboardAdjusting/LHSKeyboardAdjusting-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		372AE83318D8B77600BBA171 /* Build configuration list for PBXProject "LHSKeyboardAdjusting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372AE85918D8B77600BBA171 /* Debug */,
+				372AE85A18D8B77600BBA171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372AE85B18D8B77600BBA171 /* Build configuration list for PBXNativeTarget "LHSKeyboardAdjusting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372AE85C18D8B77600BBA171 /* Debug */,
+				372AE85D18D8B77600BBA171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 372AE83018D8B77600BBA171 /* Project object */;
+}

@@ -3,7 +3,7 @@ LHSKeyboardAdjusting
 
 After one too many times of referencing a [Gist](https://gist.github.com/dlo/8572874) I wrote on how to set up automatic view resizing when a keyboard appears in iOS, I decided to just abstract the entire thing and throw it up on GitHub.
 
-LHSKeyboardAdjusting will adjust the height of your UIScrollView or UITableView when a keyboard appears on screen using Auto Layout. All you have to do is provide LHSKeyboardAdjusting with an NSLayoutConstraint that pins the bottom of your view to the bottom of the screen. LHSKeyboardAdjusting will automatically adjust that constraint and pin it to the top of the keyboard when it appears.
+LHSKeyboardAdjusting will adjust the bottom position of your UIScrollView or UITableView when a keyboard appears on screen using Auto Layout. All you have to do is provide LHSKeyboardAdjusting with an NSLayoutConstraint that pins the bottom of your view to the bottom of the screen. LHSKeyboardAdjusting will automatically adjust that constraint and pin it to the top of the keyboard when it appears.
 
 Installation
 ------------

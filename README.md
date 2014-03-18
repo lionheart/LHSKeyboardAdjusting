@@ -56,5 +56,5 @@ Usage
    }
    ```
 
-3. And you're done!
+3. And you're done! Whenever a keyboard appears, your views will be automatically resized.
 

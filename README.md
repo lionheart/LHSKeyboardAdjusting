@@ -5,6 +5,8 @@ After one too many times of referencing a [Gist](https://gist.github.com/dlo/857
 
 LHSKeyboardAdjusting will adjust the bottom position of your UIScrollView or UITableView when a keyboard appears on screen using Auto Layout. All you have to do is provide LHSKeyboardAdjusting with an NSLayoutConstraint that pins the bottom of your view to the bottom of the screen. LHSKeyboardAdjusting will automatically adjust that constraint and pin it to the top of the keyboard when it appears.
 
+Note: LHSKeyboardAdjusting requires Auto Layout in your build target, so it will only work with iOS 6+.
+
 Installation
 ------------
 

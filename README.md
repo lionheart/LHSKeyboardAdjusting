@@ -19,20 +19,24 @@ Usage
 
 1. In your view controller's header file, import and assign the `LHSKeyboardAdjusting` protocol.
 
-        #import <LHSKeyboardAdjusting/LHSKeyboardAdjusting.h>
+   ```objc
+   #import <LHSKeyboardAdjusting/LHSKeyboardAdjusting.h>
 
-        @interface AViewController : UIViewController <LHSKeyboardAdjusting>
+   @interface AViewController : UIViewController <LHSKeyboardAdjusting>
+   ```
 
 2. Figure out which view you'd like to pin to the top of the keyboard. It could be anything, but a UIScrollView, UITableView, or a UITextView are the most likely candidates. Then, wherever you're setting up your view constraints, define an `NSLayoutConstraint` property that pins the bottom of this view to the bottom of the screen, like so:
 
-        self.bottomConstraint = [NSLayoutConstraint constraintWithItem:self.adjustingView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.bottomLayoutGuide attribute:NSLayoutAttributeTop multiplier:1 constant:0];
-        [self.view addConstraint:self.bottomConstraint];
+   ```objc
+   self.bottomConstraint = [NSLayoutConstraint constraintWithItem:self.adjustingView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.bottomLayoutGuide attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+   [self.view addConstraint:self.bottomConstraint];
+   ```
 
    After you've done this, define the `keyboardAdjustingBottomConstraint` delegate method to return this constraint:
 
    ```objc
    #pragma mark - LHSKeyboardAdjusting
-   
+
    - (NSLayoutConstraint *)keyboardAdjustingBottomConstraint {
        return self.bottomConstraint;
    }
@@ -40,15 +44,17 @@ Usage
 
 3. All you need to do now is activate and deactivate the automatic adjustments.
 
-        - (void)viewWillAppear:(BOOL)animated {
-            [super viewWillAppear:animated];
-            [self lhs_activateKeyboardAdjustment];
-        }
+   ```objc
+   - (void)viewWillAppear:(BOOL)animated {
+       [super viewWillAppear:animated];
+       [self lhs_activateKeyboardAdjustment];
+   }
 
-        - (void)viewWillDisappear:(BOOL)animated {
-            [super viewWillDisappear:animated];
-            [self lhs_deactivateKeyboardAdjustment];
-        }
+   - (void)viewWillDisappear:(BOOL)animated {
+       [super viewWillDisappear:animated];
+       [self lhs_deactivateKeyboardAdjustment];
+   }
+   ```
 
 3. And you're done!
 

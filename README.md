@@ -12,7 +12,7 @@ Installation
 
 LHSKeyboardAdjusting uses Cocoapods, so in your Podfile, just add something like this:
 
-    pod 'LHSKeyboardAdjusting', '0.0.1'
+    pod 'LHSKeyboardAdjusting', '~> 0.0'
 
 Then run `pod update` and you'll be ready to go.
 

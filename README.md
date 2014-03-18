@@ -30,12 +30,13 @@ Usage
 
    After you've done this, define the `keyboardAdjustingBottomConstraint` delegate method to return this constraint:
 
-        #pragma mark - LHSKeyboardAdjusting
+```objc
+#pragma mark - LHSKeyboardAdjusting
 
-        - (NSLayoutConstraint *)keyboardAdjustingBottomConstraint {
-            return self.bottomConstraint;
-        }
-
+- (NSLayoutConstraint *)keyboardAdjustingBottomConstraint {
+    return self.bottomConstraint;
+}
+```
 
 3. All you need to do now is activate and deactivate the automatic adjustments.
 

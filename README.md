@@ -15,7 +15,7 @@ LHSKeyboardAdjusting uses Cocoapods, so in your Podfile, just add something like
 
 Then run `pod update` and you'll be ready to go.
 
-If you don't use Cocoapods, dragging and dropping the folder into your Xcode project will do the trick as well.
+If you don't use Cocoapods, dragging and dropping the `LHSKeyboardAdjusting` folder into your Xcode project will do the trick as well.
 
 ### Usage
 

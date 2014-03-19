@@ -49,7 +49,7 @@ Usage
    ```objc
    #import <LHSKeyboardAdjusting/UIViewController+LHSKeyboardAdjustment.h>
 
-   # ...
+   // ...
 
    - (void)viewWillAppear:(BOOL)animated {
        [super viewWillAppear:animated];

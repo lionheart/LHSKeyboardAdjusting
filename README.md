@@ -47,6 +47,10 @@ Usage
 3. All you need to do now is activate and deactivate the automatic adjustments.
 
    ```objc
+   #import <LHSKeyboardAdjusting/UIViewController+LHSKeyboardAdjustment.h>
+
+   # ...
+
    - (void)viewWillAppear:(BOOL)animated {
        [super viewWillAppear:animated];
        [self lhs_activateKeyboardAdjustment];

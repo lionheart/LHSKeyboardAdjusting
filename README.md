@@ -40,7 +40,7 @@ If you don't use Cocoapods, dragging and dropping the `LHSKeyboardAdjusting` fol
    #pragma mark - LHSKeyboardAdjusting
 
    - (NSLayoutConstraint *)keyboardAdjustingBottomConstraint {
-       return self.bottomConstraint;
+        return self.bottomConstraint;
    }
    ```
 

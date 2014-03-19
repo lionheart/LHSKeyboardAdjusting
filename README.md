@@ -7,8 +7,7 @@ LHSKeyboardAdjusting will adjust the bottom position of your UIScrollView or UIT
 
 Note: LHSKeyboardAdjusting requires Auto Layout in your build target, so it will only work with iOS 6+.
 
-Installation
-------------
+### Installation
 
 LHSKeyboardAdjusting uses Cocoapods, so in your Podfile, just add something like this:
 
@@ -16,8 +15,7 @@ LHSKeyboardAdjusting uses Cocoapods, so in your Podfile, just add something like
 
 Then run `pod update` and you'll be ready to go.
 
-Usage
------
+### Usage
 
 1. In your view controller's header file, import and assign the `LHSKeyboardAdjusting` protocol.
 
@@ -64,3 +62,10 @@ Usage
 
 3. And you're done! Whenever a keyboard appears, your views will be automatically resized.
 
+### Contributing
+
+The only big feature I see missing is iOS 5 support, but otherwise I don't think much else is needed for this project. If you see a bug, please file an issue and I'll look into it right away.
+
+### License
+
+Apache 2.0, see [LICENSE](LICENSE) file for details.

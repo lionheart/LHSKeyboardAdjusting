@@ -10,6 +10,12 @@
 
 @implementation UIViewController (LHSKeyboardAdjustment)
 
+CGFloat _savedBottomConstraintConstant;
+
+- (CGFloat) savedBottomConstraintConstant {
+    return _savedBottomConstraintConstant;
+}
+
 - (void)lhs_activateKeyboardAdjustment {
     [self lhs_activateKeyboardAdjustmentWithShow:nil hide:nil];
 }
@@ -41,7 +47,7 @@
             block();
         }
         
-        self.keyboardAdjustingBottomConstraint.constant = 0;
+        self.keyboardAdjustingBottomConstraint.constant = self.savedBottomConstraintConstant;
         [self.view layoutIfNeeded];
     }
 }
@@ -58,7 +64,8 @@
         
         CGRect frame = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
         CGRect newFrame = [self.view convertRect:frame fromView:[[UIApplication sharedApplication] delegate].window];
-        self.keyboardAdjustingBottomConstraint.constant = newFrame.origin.y - CGRectGetHeight(self.view.frame);
+        _savedBottomConstraintConstant = self.keyboardAdjustingBottomConstraint.constant;
+        self.keyboardAdjustingBottomConstraint.constant = self.savedBottomConstraintConstant + newFrame.origin.y - CGRectGetHeight(self.view.frame);
         [self.view layoutIfNeeded];
     }
 }

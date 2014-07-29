@@ -20,4 +20,6 @@ typedef void (^LHSKeyboardAdjustingBlock)();
                                           hide:(LHSKeyboardAdjustingBlock)hide;
 - (void)lhs_deactivateKeyboardAdjustment;
 
+@property (nonatomic, readonly) CGFloat savedBottomConstraintConstant;
+
 @end

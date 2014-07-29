@@ -68,6 +68,10 @@ If you don't use Cocoapods, dragging and dropping the `LHSKeyboardAdjusting` fol
 
 The only big feature I see missing is iOS 5 support, but otherwise I don't think much else is needed for this project. If you see a bug, please file an issue and I'll look into it right away.
 
+### Support
+
+If you like this library, consider supporting me and my open source efforts through [Gittip](https://www.gittip.com/dlo/).
+
 ### License
 
 Apache 2.0, see [LICENSE](LICENSE) file for details.

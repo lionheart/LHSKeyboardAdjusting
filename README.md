@@ -70,7 +70,9 @@ The only big feature I see missing is iOS 5 support, but otherwise I don't think
 
 ### Support
 
-If you like this library, consider supporting me and my open source efforts through [Gittip](https://www.gittip.com/dlo/).
+If you like this library, consider supporting my open source efforts through [Gittip](https://www.gittip.com/dlo/).
+
+![](http://img.shields.io/gittip/dlo.svg?style=flat)
 
 ### License
 

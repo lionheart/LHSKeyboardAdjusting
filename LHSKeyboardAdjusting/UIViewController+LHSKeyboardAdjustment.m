@@ -41,8 +41,15 @@
             block();
         }
         
+        NSDictionary *userInfo = sender.userInfo;
+        NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+        UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+
+        
         self.keyboardAdjustingBottomConstraint.constant = 0;
-        [self.view layoutIfNeeded];
+        [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
+            [self.view layoutIfNeeded];
+        } completion:nil];
     }
 }
 
@@ -58,8 +65,15 @@
         
         CGRect frame = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
         CGRect keyboardFrameInViewCoordinates = [self.view convertRect:frame fromView:nil];
+        NSDictionary *userInfo = sender.userInfo;
+        NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+        UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+
         self.keyboardAdjustingBottomConstraint.constant = CGRectGetHeight(self.view.bounds) - keyboardFrameInViewCoordinates.origin.y;
-        [self.view layoutIfNeeded];
+
+        [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
+            [self.view layoutIfNeeded];
+        } completion:nil];
     }
 }
 

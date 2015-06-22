@@ -77,4 +77,10 @@
     }
 }
 
+- (NSLayoutConstraint *)keyboardAdjustingBottomConstraint {
+
+    [NSException raise:NSInternalInconsistencyException format:@"'%@' must override -keyboardAdjustingBottomConstraint", NSStringFromClass(self.class)];
+
+    return nil;
+}
 @end

@@ -47,9 +47,15 @@
 
         
         self.keyboardAdjustingBottomConstraint.constant = 0;
-        [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
+        if(self.keyboardAdjustiongAnimated) {
+            [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
+                [self.view layoutIfNeeded];
+            } completion:nil];
+        }
+        else
+        {
             [self.view layoutIfNeeded];
-        } completion:nil];
+        }
     }
 }
 
@@ -71,9 +77,15 @@
 
         self.keyboardAdjustingBottomConstraint.constant = CGRectGetHeight(self.view.bounds) - keyboardFrameInViewCoordinates.origin.y;
 
-        [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
+        if(self.keyboardAdjustiongAnimated) {
+            [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
+                [self.view layoutIfNeeded];
+            } completion:nil];
+        }
+        else
+        {
             [self.view layoutIfNeeded];
-        } completion:nil];
+        }
     }
 }
 
@@ -82,5 +94,10 @@
     [NSException raise:NSInternalInconsistencyException format:@"'%@' must override -keyboardAdjustingBottomConstraint", NSStringFromClass(self.class)];
 
     return nil;
+}
+
+- (BOOL)keyboardAdjustiongAnimated
+{
+    return NO; // don't animate by default
 }
 @end

@@ -11,7 +11,7 @@ Note: LHSKeyboardAdjusting requires Auto Layout in your build target, so it will
 
 LHSKeyboardAdjusting uses Cocoapods, so in your Podfile, just add something like this:
 
-    pod 'LHSKeyboardAdjusting', '0.0.1'
+    pod 'LHSKeyboardAdjusting', '0.0.2'
 
 Then run `pod update` and you'll be ready to go.
 
@@ -67,12 +67,6 @@ If you don't use Cocoapods, dragging and dropping the `LHSKeyboardAdjusting` fol
 ### Contributing
 
 The only big feature I see missing is iOS 5 support, but otherwise I don't think much else is needed for this project. If you see a bug, please file an issue and I'll look into it right away.
-
-### Support
-
-If you like this library, consider supporting my open source efforts through [Gittip](https://www.gittip.com/dlo/).
-
-![](http://img.shields.io/gittip/dlo.svg?style=flat)
 
 ### License
 

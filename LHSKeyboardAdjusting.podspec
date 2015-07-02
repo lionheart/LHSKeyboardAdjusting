@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LHSKeyboardAdjusting"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "An easy-to-use utility that will automatically resize views whenever a keyboard appears"
   s.homepage     = "http://lionheartsw.com/"
   s.license      = 'Apache 2.0'

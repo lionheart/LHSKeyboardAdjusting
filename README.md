@@ -9,13 +9,13 @@ Note: LHSKeyboardAdjusting requires Auto Layout in your build target, so it will
 
 ### Installation
 
-LHSKeyboardAdjusting uses Cocoapods, so in your Podfile, just add something like this:
+LHSKeyboardAdjusting uses CocoaPods, so in your Podfile, just add something like this:
 
     pod 'LHSKeyboardAdjusting', '0.0.1'
 
 Then run `pod update` and you'll be ready to go.
 
-If you don't use Cocoapods, dragging and dropping the `LHSKeyboardAdjusting` folder into your Xcode project will do the trick as well.
+If you don't use CocoaPods, dragging and dropping the `LHSKeyboardAdjusting` folder into your Xcode project will do the trick as well.
 
 ### Usage
 

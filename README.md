@@ -1,4 +1,4 @@
-For the Swift port of this project, please see [KeyboardAdjusted](https://github.com/lionheart/KeyboardAdjusted).
+For the Swift port of this project, please see [KeyboardAdjuster](https://github.com/lionheart/KeyboardAdjuster).
 
 LHSKeyboardAdjusting
 --------------------

@@ -44,16 +44,14 @@
         NSDictionary *userInfo = sender.userInfo;
         NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
         UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
-
         
         self.keyboardAdjustingBottomConstraint.constant = 0;
-        if(self.keyboardAdjustiongAnimated) {
+        if (self.keyboardAdjustingAnimated) {
             [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
                 [self.view layoutIfNeeded];
             } completion:nil];
         }
-        else
-        {
+        else {
             [self.view layoutIfNeeded];
         }
     }
@@ -77,13 +75,12 @@
 
         self.keyboardAdjustingBottomConstraint.constant = CGRectGetHeight(self.view.bounds) - keyboardFrameInViewCoordinates.origin.y;
 
-        if(self.keyboardAdjustiongAnimated) {
+        if (self.keyboardAdjustingAnimated) {
             [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
                 [self.view layoutIfNeeded];
             } completion:nil];
         }
-        else
-        {
+        else {
             [self.view layoutIfNeeded];
         }
     }
@@ -96,7 +93,7 @@
     return nil;
 }
 
-- (BOOL)keyboardAdjustiongAnimated
+- (BOOL)keyboardAdjustingAnimated
 {
     return NO; // don't animate by default
 }

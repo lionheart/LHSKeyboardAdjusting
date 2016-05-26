@@ -10,7 +10,8 @@
 
 @protocol LHSKeyboardAdjusting <NSObject>
 
+@required
 - (NSLayoutConstraint *)keyboardAdjustingBottomConstraint;
-- (BOOL)keyboardAdjustiongAnimated;
+- (BOOL)keyboardAdjustingAnimated;
 
 @end

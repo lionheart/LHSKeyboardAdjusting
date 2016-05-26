@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.social_media_url = "http://twitter.com/dwlz"
   s.platform     = :ios, '6.0'
 
-  s.source       = { :git => "https://github.com/lionheart/LHSKeyboardAdjusting.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/lionheart/LHSKeyboardAdjusting.git", :tag => "1.0.0" }
 
   s.source_files  = 'LHSKeyboardAdjusting/**/*.{h,m}'
 

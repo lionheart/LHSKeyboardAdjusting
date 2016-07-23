@@ -23,7 +23,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(lhs_keyboardDidShow:)
                                                  name:UIKeyboardDidShowNotification
-                                               object:show];;
+                                               object:show];
 }
 
 - (void)lhs_deactivateKeyboardAdjustment {
@@ -44,10 +44,11 @@
         NSDictionary *userInfo = sender.userInfo;
         NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
         UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
-        
+
         self.keyboardAdjustingBottomConstraint.constant = 0;
         if (self.keyboardAdjustingAnimated) {
-            [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
+            UIViewAnimationOptions options = UIViewAnimationOptionBeginFromCurrentState | curve;
+            [UIView animateWithDuration:duration delay:0 options:options animations:^{
                 [self.view layoutIfNeeded];
             } completion:nil];
         }
@@ -86,15 +87,13 @@
     }
 }
 
-- (NSLayoutConstraint *)keyboardAdjustingBottomConstraint {
-
+- (NSLayoutConstraint * _Nullable)keyboardAdjustingBottomConstraint {
     [NSException raise:NSInternalInconsistencyException format:@"'%@' must override -keyboardAdjustingBottomConstraint", NSStringFromClass(self.class)];
-
     return nil;
 }
 
-- (BOOL)keyboardAdjustingAnimated
-{
-    return NO; // don't animate by default
+- (BOOL)keyboardAdjustingAnimated {
+    return NO;
 }
+
 @end

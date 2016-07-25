@@ -32,6 +32,7 @@
 		372AE86118D8B7B400BBA171 /* LHSKeyboardAdjusting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSKeyboardAdjusting.h; sourceTree = "<group>"; };
 		372AE86218D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LHSKeyboardAdjustment.h"; sourceTree = "<group>"; };
 		372AE86318D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LHSKeyboardAdjustment.m"; sourceTree = "<group>"; };
+		37585EC41D466AC800B8D8AE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +77,9 @@
 		372AE83D18D8B77600BBA171 /* LHSKeyboardAdjusting */ = {
 			isa = PBXGroup;
 			children = (
+				37585EC41D466AC800B8D8AE /* LICENSE */,
 				372AE83E18D8B77600BBA171 /* Supporting Files */,
-				372AE86118D8B7B400BBA171 /* LHSKeyboardAdjusting.h */,
-				372AE86218D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.h */,
-				372AE86318D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.m */,
+				37585EC51D466AE400B8D8AE /* Source */,
 			);
 			path = LHSKeyboardAdjusting;
 			sourceTree = "<group>";
@@ -90,6 +90,16 @@
 				372AE83F18D8B77600BBA171 /* LHSKeyboardAdjusting-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37585EC51D466AE400B8D8AE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				372AE86118D8B7B400BBA171 /* LHSKeyboardAdjusting.h */,
+				372AE86218D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.h */,
+				372AE86318D8B7C900BBA171 /* UIViewController+LHSKeyboardAdjustment.m */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +271,7 @@
 				372AE85D18D8B77600BBA171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

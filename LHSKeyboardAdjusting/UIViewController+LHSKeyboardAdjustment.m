@@ -27,7 +27,7 @@
     [self lhs_activateKeyboardAdjustmentWithShow:nil hide:nil];
 }
 
-- (void)lhs_activateKeyboardAdjustmentWithShow:(LHSKeyboardAdjustingBlock)show hide:(LHSKeyboardAdjustingBlock)hide {
+- (void)lhs_activateKeyboardAdjustmentWithShow:(nullable LHSKeyboardAdjustingBlock)show hide:(nullable LHSKeyboardAdjustingBlock)hide {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(lhs_keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
@@ -100,7 +100,7 @@
     }
 }
 
-- (NSLayoutConstraint * _Nullable)keyboardAdjustingBottomConstraint {
+- (nullable NSLayoutConstraint *)keyboardAdjustingBottomConstraint {
     [NSException raise:NSInternalInconsistencyException format:@"'%@' must override -keyboardAdjustingBottomConstraint", NSStringFromClass(self.class)];
     return nil;
 }

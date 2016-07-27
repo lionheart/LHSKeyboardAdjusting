@@ -8,5 +8,6 @@ before_install:
 - pod install --project-directory=LHSKeyboardAdjustingExample
 
 script:
-- set -o pipefail && xcodebuild test -workspace LHSKeyboardAdjustingExample/LHSKeyboardAdjustingExample.xcworkspace -scheme LHSKeyboardAdjustingExample -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace LHSKeyboardAdjustingExample/LHSKeyboardAdjustingExample.xcworkspace -scheme LHSKeyboardAdjustingExample -destination "platform=iOS Simulator,name=iPhone 5s" -destination-timeout 1 -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
+

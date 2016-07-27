@@ -109,9 +109,15 @@
 }
 
 - (NSLayoutConstraint *)lhs_initializeKeyboardAdjustingConstraintForView:(UIView *)theView {
-    NSLayoutConstraint *constraint = [self.view.bottomAnchor constraintEqualToAnchor:theView.bottomAnchor];
-    constraint.active = YES;
-    return constraint;
+    if ([self.view respondsToSelector:@selector(bottomAnchor)]) {
+        NSLayoutConstraint *constraint = [self.view.bottomAnchor constraintEqualToAnchor:theView.bottomAnchor];
+        constraint.active = YES;
+        return constraint;
+    } else {
+        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:theView attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+        [self.view addConstraint:constraint];
+        return constraint;
+    }
 }
 
 @end

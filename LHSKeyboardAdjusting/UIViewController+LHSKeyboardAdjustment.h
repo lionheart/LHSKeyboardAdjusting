@@ -1,9 +1,4 @@
 //
-//  UIViewController+LHSKeyboardAdjustment.h
-//  LHSKeyboardAdjusting
-//
-//  Created by Dan Loewenherz on 3/18/14.
-//
 //  Copyright 2014 Lionheart Software LLC
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");

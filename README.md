@@ -35,7 +35,7 @@ If you don't use CocoaPods, dragging and dropping the `LHSKeyboardAdjusting` fol
 
 2. In your view controller, implement `keyboardAdjustingView` to return the view you'd like to pin to the top of the keyboard. It could be anything, but a UIScrollView, UITableView, or a UITextView are the most likely candidates.
 
-   ```
+   ```objc
    #pragma mark - LHSKeyboardAdjusting
 
    - (UIView *)keyboardAdjustingView {
@@ -77,7 +77,9 @@ If you don't use CocoaPods, dragging and dropping the `LHSKeyboardAdjusting` fol
    @end
    ```
 
-3. And you're done! Whenever a keyboard appears, this view will be automatically resized when a keyboard appears. If you need more pointers, clone this repo and check out the example project (LHSKeyboardAdjustingExample).
+3. And you're done! Whenever a keyboard appears, this view will be automatically resized.
+
+If you need more pointers on how to set everything up, clone this repo and check out the included example project (LHSKeyboardAdjustingExample).
 
 ### License
 

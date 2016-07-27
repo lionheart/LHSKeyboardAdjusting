@@ -29,8 +29,9 @@ typedef void (^LHSKeyboardAdjustingBlock)();
 - (void)lhs_keyboardWillHide:(nonnull NSNotification *)sender;
 - (void)lhs_keyboardDidShow:(nonnull NSNotification *)sender;
 - (void)lhs_activateKeyboardAdjustment;
-- (void)lhs_activateKeyboardAdjustmentWithShow:(nullable LHSKeyboardAdjustingBlock)show
-                                          hide:(nullable LHSKeyboardAdjustingBlock)hide;
+- (void)lhs_activateKeyboardAdjustmentWithShow:(nonnull LHSKeyboardAdjustingBlock)show
+                                          hide:(nonnull LHSKeyboardAdjustingBlock)hide;
 - (void)lhs_deactivateKeyboardAdjustment;
+- (NSLayoutConstraint *)initializeKeyboardAdjustingConstraintForView:(UIView *)view;
 
 @end

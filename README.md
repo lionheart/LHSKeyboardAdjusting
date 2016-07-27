@@ -11,7 +11,9 @@ LHSKeyboardAdjusting will adjust the bottom position of your UIScrollView or UIT
 
 LHSKeyboardAdjusting requires Auto Layout in your build target, so it will only work with iOS 6+.
 
-NOTE: If you're currently using LHSKeyboardAdjusting 1.0+ in your project, note that some things have changed.
+#### NOTE
+
+If you're currently using LHSKeyboardAdjusting 1.0+ in your project, note that some things have changed.
 
 ### Installation
 

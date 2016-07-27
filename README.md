@@ -66,15 +66,31 @@ If you don't use CocoaPods, dragging and dropping the `LHSKeyboardAdjusting` fol
 
    - (void)viewWillAppear:(BOOL)animated {
        [super viewWillAppear:animated];
+
        [self lhs_activateKeyboardAdjustment];
    }
 
    - (void)viewWillDisappear:(BOOL)animated {
        [super viewWillDisappear:animated];
+
        [self lhs_deactivateKeyboardAdjustment];
    }
 
    @end
+   ```
+
+   Note: you can also define callbacks on keyboard appearance or disappearance using `lhs_activateKeyboardAdjustmentWithShow:hide:`:
+
+   ```objc
+   - (void)viewWillAppear:(BOOL)animated {
+       [super viewWillAppear:animated];
+
+       [self lhs_activateKeyboardAdjustmentWithShow:^{
+           NSLog(@"hi");
+       } hide:^{
+           NSLog(@"bai");
+       }];
+   }
    ```
 
 3. And you're done! Whenever a keyboard appears, this view will be automatically resized.

@@ -1,0 +1,5 @@
+platform :ios, '9.0'
+
+target 'LHSKeyboardAdjustingExample' do
+  pod 'LHSKeyboardAdjusting', :path => '..'
+end

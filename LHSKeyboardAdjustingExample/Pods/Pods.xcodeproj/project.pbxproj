@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DD25041C0DFB6D9A476A50E85F4C503 /* Pods-LHSKeyboardAdjustingExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 209208380DE7488BA6CE7F9B47D7DF5D /* Pods-LHSKeyboardAdjustingExample-dummy.m */; };
+		1BD65394962DEAAB928E073EE44B3A6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		40E5D507C80006125006611C54DD61ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		78D9302F395066E65B934ED8C7B4FCFB /* UIViewController+LHSKeyboardAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 910D4DF19F0ADCC36DE3D883E3A657A5 /* UIViewController+LHSKeyboardAdjustment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A66285830DFE3D676B630D3AD8364CB2 /* LHSKeyboardAdjusting.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED07AAFCCC1409CEE70A01B4FA9C710 /* LHSKeyboardAdjusting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC7FC0FDBE36E26249300977F6C31899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		EBDA8E3D032316E462D9A45C2E2A45FD /* LHSKeyboardAdjusting-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B29452A850C38ECE244E88D077AD7CED /* LHSKeyboardAdjusting-dummy.m */; };
+		EFFE62E2DA3547C7573DD8B197ADC5B3 /* UIViewController+LHSKeyboardAdjustment.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EB0C88A482A71CDF200FEB947099F3 /* UIViewController+LHSKeyboardAdjustment.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2DA56D0CABFA88EB2C22C2FF14A2413 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDA03E27E7416CB4375D7EC6DF3E61A1;
+			remoteInfo = LHSKeyboardAdjusting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		209208380DE7488BA6CE7F9B47D7DF5D /* Pods-LHSKeyboardAdjustingExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LHSKeyboardAdjustingExample-dummy.m"; sourceTree = "<group>"; };
+		21EB0C88A482A71CDF200FEB947099F3 /* UIViewController+LHSKeyboardAdjustment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LHSKeyboardAdjustment.m"; sourceTree = "<group>"; };
+		35551C12361396D7EAF9F4CB94D8F637 /* libPods-LHSKeyboardAdjustingExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LHSKeyboardAdjustingExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3599D2C61E79B5445F15AA77334BC96F /* Pods-LHSKeyboardAdjustingExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LHSKeyboardAdjustingExample.debug.xcconfig"; sourceTree = "<group>"; };
+		4D90549C2FB778E07F1EBC95B96863E6 /* LHSKeyboardAdjusting.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LHSKeyboardAdjusting.xcconfig; sourceTree = "<group>"; };
+		6ED07AAFCCC1409CEE70A01B4FA9C710 /* LHSKeyboardAdjusting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LHSKeyboardAdjusting.h; sourceTree = "<group>"; };
+		756E97F25AD3D012C24F38D835FB75E4 /* Pods-LHSKeyboardAdjustingExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LHSKeyboardAdjustingExample-resources.sh"; sourceTree = "<group>"; };
+		8BF055AEBEE4D7C4A9C57A749C0FAC0F /* libLHSKeyboardAdjusting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLHSKeyboardAdjusting.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		910D4DF19F0ADCC36DE3D883E3A657A5 /* UIViewController+LHSKeyboardAdjustment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LHSKeyboardAdjustment.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9459AE37C866CD05100A9CE3F31DE979 /* Pods-LHSKeyboardAdjustingExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LHSKeyboardAdjustingExample.release.xcconfig"; sourceTree = "<group>"; };
+		95635157D5FB4FA03F1284863257FD4F /* LHSKeyboardAdjusting-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LHSKeyboardAdjusting-prefix.pch"; sourceTree = "<group>"; };
+		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		AAF8BBCA4453FF271BFC64030AFC1FBA /* Pods-LHSKeyboardAdjustingExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LHSKeyboardAdjustingExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B29452A850C38ECE244E88D077AD7CED /* LHSKeyboardAdjusting-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LHSKeyboardAdjusting-dummy.m"; sourceTree = "<group>"; };
+		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F11344AD643C8AF78957DCFF59DED6C1 /* Pods-LHSKeyboardAdjustingExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LHSKeyboardAdjustingExample-frameworks.sh"; sourceTree = "<group>"; };
+		F30554BA61D404B09ACF6D8C6CEA7D67 /* Pods-LHSKeyboardAdjustingExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LHSKeyboardAdjustingExample-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2B6AA871CDB447DDB6AECFA55F583FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD65394962DEAAB928E073EE44B3A6F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9819F0599DC3E2BB4E0DFEFD6A48D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC7FC0FDBE36E26249300977F6C31899 /* Foundation.framework in Frameworks */,
+				40E5D507C80006125006611C54DD61ED /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EAD0FF871E6E02844A80D9873984264 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				58AE308768F2B8B3D88E5C682893B7E5 /* Pods-LHSKeyboardAdjustingExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58AE308768F2B8B3D88E5C682893B7E5 /* Pods-LHSKeyboardAdjustingExample */ = {
+			isa = PBXGroup;
+			children = (
+				AAF8BBCA4453FF271BFC64030AFC1FBA /* Pods-LHSKeyboardAdjustingExample-acknowledgements.markdown */,
+				F30554BA61D404B09ACF6D8C6CEA7D67 /* Pods-LHSKeyboardAdjustingExample-acknowledgements.plist */,
+				209208380DE7488BA6CE7F9B47D7DF5D /* Pods-LHSKeyboardAdjustingExample-dummy.m */,
+				F11344AD643C8AF78957DCFF59DED6C1 /* Pods-LHSKeyboardAdjustingExample-frameworks.sh */,
+				756E97F25AD3D012C24F38D835FB75E4 /* Pods-LHSKeyboardAdjustingExample-resources.sh */,
+				3599D2C61E79B5445F15AA77334BC96F /* Pods-LHSKeyboardAdjustingExample.debug.xcconfig */,
+				9459AE37C866CD05100A9CE3F31DE979 /* Pods-LHSKeyboardAdjustingExample.release.xcconfig */,
+			);
+			name = "Pods-LHSKeyboardAdjustingExample";
+			path = "Target Support Files/Pods-LHSKeyboardAdjustingExample";
+			sourceTree = "<group>";
+		};
+		7BAD8240CED5B058270322870B0BE920 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D90549C2FB778E07F1EBC95B96863E6 /* LHSKeyboardAdjusting.xcconfig */,
+				B29452A850C38ECE244E88D077AD7CED /* LHSKeyboardAdjusting-dummy.m */,
+				95635157D5FB4FA03F1284863257FD4F /* LHSKeyboardAdjusting-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "LHSKeyboardAdjustingExample/Pods/Target Support Files/LHSKeyboardAdjusting";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				AAEF5A2FAD0B045399F21ED109F8282A /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				F6ED8F7784CBA21782C06F4C891F93D5 /* Products */,
+				2EAD0FF871E6E02844A80D9873984264 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		890B5D218ED36B3ED99DDAFFDA65C590 /* LHSKeyboardAdjusting */ = {
+			isa = PBXGroup;
+			children = (
+				DDF2014C9E03E01F38DA8306B8F7A27C /* LHSKeyboardAdjusting */,
+				7BAD8240CED5B058270322870B0BE920 /* Support Files */,
+			);
+			name = LHSKeyboardAdjusting;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		AAEF5A2FAD0B045399F21ED109F8282A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				890B5D218ED36B3ED99DDAFFDA65C590 /* LHSKeyboardAdjusting */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		DDF2014C9E03E01F38DA8306B8F7A27C /* LHSKeyboardAdjusting */ = {
+			isa = PBXGroup;
+			children = (
+				6ED07AAFCCC1409CEE70A01B4FA9C710 /* LHSKeyboardAdjusting.h */,
+				910D4DF19F0ADCC36DE3D883E3A657A5 /* UIViewController+LHSKeyboardAdjustment.h */,
+				21EB0C88A482A71CDF200FEB947099F3 /* UIViewController+LHSKeyboardAdjustment.m */,
+			);
+			path = LHSKeyboardAdjusting;
+			sourceTree = "<group>";
+		};
+		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
+				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F6ED8F7784CBA21782C06F4C891F93D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BF055AEBEE4D7C4A9C57A749C0FAC0F /* libLHSKeyboardAdjusting.a */,
+				35551C12361396D7EAF9F4CB94D8F637 /* libPods-LHSKeyboardAdjustingExample.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9DD24E595CF044E97DD3E56A25F5594B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A66285830DFE3D676B630D3AD8364CB2 /* LHSKeyboardAdjusting.h in Headers */,
+				78D9302F395066E65B934ED8C7B4FCFB /* UIViewController+LHSKeyboardAdjustment.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DDA03E27E7416CB4375D7EC6DF3E61A1 /* LHSKeyboardAdjusting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD2C8E74F4D2246F34453DABA33BBF45 /* Build configuration list for PBXNativeTarget "LHSKeyboardAdjusting" */;
+			buildPhases = (
+				6778FBD8B70AA5A4C9C260E93110CAAF /* Sources */,
+				DE9819F0599DC3E2BB4E0DFEFD6A48D4 /* Frameworks */,
+				9DD24E595CF044E97DD3E56A25F5594B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LHSKeyboardAdjusting;
+			productName = LHSKeyboardAdjusting;
+			productReference = 8BF055AEBEE4D7C4A9C57A749C0FAC0F /* libLHSKeyboardAdjusting.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DE97195024A9ADA24262FEE8DF4EBA52 /* Pods-LHSKeyboardAdjustingExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EA52B58D66AC8B07A219A0155EF17D2 /* Build configuration list for PBXNativeTarget "Pods-LHSKeyboardAdjustingExample" */;
+			buildPhases = (
+				FE184816AE9652CB71CB37F737E8CE38 /* Sources */,
+				D2B6AA871CDB447DDB6AECFA55F583FD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2C0940EB04E24FB1A1CB57C8F3B1864 /* PBXTargetDependency */,
+			);
+			name = "Pods-LHSKeyboardAdjustingExample";
+			productName = "Pods-LHSKeyboardAdjustingExample";
+			productReference = 35551C12361396D7EAF9F4CB94D8F637 /* libPods-LHSKeyboardAdjustingExample.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = F6ED8F7784CBA21782C06F4C891F93D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDA03E27E7416CB4375D7EC6DF3E61A1 /* LHSKeyboardAdjusting */,
+				DE97195024A9ADA24262FEE8DF4EBA52 /* Pods-LHSKeyboardAdjustingExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6778FBD8B70AA5A4C9C260E93110CAAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBDA8E3D032316E462D9A45C2E2A45FD /* LHSKeyboardAdjusting-dummy.m in Sources */,
+				EFFE62E2DA3547C7573DD8B197ADC5B3 /* UIViewController+LHSKeyboardAdjustment.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE184816AE9652CB71CB37F737E8CE38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD25041C0DFB6D9A476A50E85F4C503 /* Pods-LHSKeyboardAdjustingExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2C0940EB04E24FB1A1CB57C8F3B1864 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LHSKeyboardAdjusting;
+			target = DDA03E27E7416CB4375D7EC6DF3E61A1 /* LHSKeyboardAdjusting */;
+			targetProxy = F2DA56D0CABFA88EB2C22C2FF14A2413 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		034014829C1E4434983CF3A690C12017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		0EB04496D492CD01F64BC639DE7B2F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D90549C2FB778E07F1EBC95B96863E6 /* LHSKeyboardAdjusting.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LHSKeyboardAdjusting/LHSKeyboardAdjusting-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2160E7BEF77C98EA3A27168935525D7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D90549C2FB778E07F1EBC95B96863E6 /* LHSKeyboardAdjusting.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LHSKeyboardAdjusting/LHSKeyboardAdjusting-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		61AD268B272BF206A453C79EDCBA2D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3599D2C61E79B5445F15AA77334BC96F /* Pods-LHSKeyboardAdjustingExample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9C1058B85D65B285D15644AB2D8ACB41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9459AE37C866CD05100A9CE3F31DE979 /* Pods-LHSKeyboardAdjustingExample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034014829C1E4434983CF3A690C12017 /* Debug */,
+				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EA52B58D66AC8B07A219A0155EF17D2 /* Build configuration list for PBXNativeTarget "Pods-LHSKeyboardAdjustingExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61AD268B272BF206A453C79EDCBA2D05 /* Debug */,
+				9C1058B85D65B285D15644AB2D8ACB41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD2C8E74F4D2246F34453DABA33BBF45 /* Build configuration list for PBXNativeTarget "LHSKeyboardAdjusting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EB04496D492CD01F64BC639DE7B2F4D /* Debug */,
+				2160E7BEF77C98EA3A27168935525D7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

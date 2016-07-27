@@ -106,7 +106,7 @@
     return NO;
 }
 
-- (NSLayoutConstraint *)initializeKeyboardAdjustingConstraintForView:(UIView *)theView {
+- (NSLayoutConstraint *)lhs_initializeKeyboardAdjustingConstraintForView:(UIView *)theView {
     NSLayoutConstraint *constraint = [self.view.bottomAnchor constraintEqualToAnchor:theView.bottomAnchor];
     constraint.active = YES;
     return constraint;

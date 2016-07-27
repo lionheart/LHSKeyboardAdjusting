@@ -26,13 +26,13 @@ If you don't use CocoaPods, dragging and dropping the `LHSKeyboardAdjusting` fol
    ```objc
    #import <LHSKeyboardAdjusting/LHSKeyboardAdjusting.h>
 
-   @interface AViewController : UIViewController <LHSKeyboardAdjusting>
+   @interface ViewController : UIViewController <LHSKeyboardAdjusting>
    ```
 
 2. Figure out which view you'd like to pin to the top of the keyboard. It could be anything, but a UIScrollView, UITableView, or a UITextView are the most likely candidates. Then, wherever you're setting up your view constraints, define an `NSLayoutConstraint` property that pins the bottom of this view to the bottom of the screen, like so:
 
    ```objc
-   self.bottomConstraint = [NSLayoutConstraint constraintWithItem:self.adjustingView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.bottomLayoutGuide attribute:NSLayoutAttributeTop multiplier:1 constant:0];
+   self.bottomConstraint = [self lhs_initializeKeyboardAdjustingConstraintForView:self.tableView];
    [self.view addConstraint:self.bottomConstraint];
    ```
 

@@ -49,7 +49,7 @@ static NSUInteger numRows = 50;
     [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
     [self.tableView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
 
-    self.bottomConstraint = [self initializeKeyboardAdjustingConstraintForView:self.tableView];
+    self.bottomConstraint = [self lhs_initializeKeyboardAdjustingConstraintForView:self.tableView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

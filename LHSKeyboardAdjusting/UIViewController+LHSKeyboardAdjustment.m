@@ -23,6 +23,8 @@
 }
 
 - (void)lhs_activateKeyboardAdjustmentWithShow:(LHSKeyboardAdjustingBlock)show hide:(LHSKeyboardAdjustingBlock)hide {
+    self.keyboardAdjustingBottomConstraint = [self lhs_initializeKeyboardAdjustingConstraintForView:self.keyboardAdjustingView];
+
     [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillHideNotification
                                                       object:nil
                                                        queue:[NSOperationQueue currentQueue]

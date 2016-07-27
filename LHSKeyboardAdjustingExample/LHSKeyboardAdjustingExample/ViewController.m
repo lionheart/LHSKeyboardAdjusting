@@ -14,7 +14,6 @@ static NSUInteger numRows = 50;
 
 @interface ViewController ()
 
-@property (nonatomic, strong) NSLayoutConstraint *bottomConstraint;
 @property (nonatomic, strong) NSMutableArray<UITextField *> *fields;
 
 @end
@@ -48,8 +47,6 @@ static NSUInteger numRows = 50;
     [self.tableView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
     [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
     [self.tableView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
-
-    self.bottomConstraint = [self lhs_initializeKeyboardAdjustingConstraintForView:self.tableView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -64,10 +61,6 @@ static NSUInteger numRows = 50;
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self lhs_deactivateKeyboardAdjustment];
-}
-
-- (NSLayoutConstraint *)keyboardAdjustingBottomConstraint {
-    return self.bottomConstraint;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -98,6 +91,12 @@ static NSUInteger numRows = 50;
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
+}
+
+#pragma mark - LHSKeyboardAdjusting
+
+- (UIView *)keyboardAdjustingView {
+    return self.tableView;
 }
 
 @end

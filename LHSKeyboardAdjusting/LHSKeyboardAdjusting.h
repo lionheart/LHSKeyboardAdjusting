@@ -16,10 +16,11 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol LHSKeyboardAdjusting <NSObject>
+@protocol LHSKeyboardAdjusting
 
-@required
-- (NSLayoutConstraint *)keyboardAdjustingBottomConstraint;
+@property (nonatomic, strong) NSLayoutConstraint *keyboardAdjustingBottomConstraint;
+
+- (UIView *)keyboardAdjustingView;
 - (BOOL)keyboardAdjustingAnimated;
 
 @end

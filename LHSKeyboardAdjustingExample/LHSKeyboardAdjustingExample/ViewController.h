@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController <LHSKeyboardAdjusting, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSLayoutConstraint *keyboardAdjustingBottomConstraint;
 
 @end
 

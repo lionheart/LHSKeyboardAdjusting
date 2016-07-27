@@ -43,7 +43,7 @@
     XCUIElement *lastCell = [app.tables.cells elementBoundByIndex:49];
     XCUIElement *table = [app.tables elementBoundByIndex:0];
 
-    for (NSInteger i=0; i<3; i++) {
+    for (NSInteger i=0; i<6; i++) {
         [table swipeUp];
     }
 

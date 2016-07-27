@@ -29,29 +29,46 @@ If you don't use CocoaPods, dragging and dropping the `LHSKeyboardAdjusting` fol
    @interface ViewController : UIViewController <LHSKeyboardAdjusting>
    ```
 
-2. Figure out which view you'd like to pin to the top of the keyboard. It could be anything, but a UIScrollView, UITableView, or a UITextView are the most likely candidates. Then, wherever you're setting up your view constraints, define an `NSLayoutConstraint` property that pins the bottom of this view to the bottom of the screen, like so:
+2. Figure out which view you'd like to pin to the top of the keyboard. It could be anything, but a UIScrollView, UITableView, or a UITextView are the most likely candidates. Wherever you're setting up your view constraints, define an `NSLayoutConstraint` property called `keyboardAdjustingBottomConstraint`. In your public interface:
 
    ```objc
-   self.bottomConstraint = [self lhs_initializeKeyboardAdjustingConstraintForView:self.tableView];
-   [self.view addConstraint:self.bottomConstraint];
+   @interface ViewController : UIViewController <LHSKeyboardAdjusting>
+
+   @property (nonatomic, strong) NSLayoutConstraint *keyboardAdjustingBottomConstraint;
+
+   @end
    ```
 
-   After you've done this, define the `keyboardAdjustingBottomConstraint` delegate method to return this constraint:
+   Then, in your view controller, implement `keyboardAdjustingView` to return the view that should be pinned to the top of the keyboard.
 
-   ```objc
+   ```
    #pragma mark - LHSKeyboardAdjusting
 
-   - (NSLayoutConstraint *)keyboardAdjustingBottomConstraint {
-        return self.bottomConstraint;
+   - (UIView *)keyboardAdjustingView {
+       return self.tableView;
    }
    ```
 
-3. All you need to do now is activate and deactivate the automatic adjustments.
+   <!--
+   Define the other constraints for this view (top, left, and right) just as you would normally. E.g.,
+
+   ```objc
+   - (void)viewDidLoad {
+       [super viewDidLoad];
+
+       [self.tableView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
+       [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+       [self.tableView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
+   }
+   ```
+   -->
+
+3. Finally, just activate and deactivate the automatic adjustments in `viewWillAppear` and `viewWillDisappear`.
 
    ```objc
    #import <LHSKeyboardAdjusting/UIViewController+LHSKeyboardAdjustment.h>
 
-   // other stuff here
+   @implementation ViewController
 
    - (void)viewWillAppear:(BOOL)animated {
        [super viewWillAppear:animated];
@@ -62,13 +79,11 @@ If you don't use CocoaPods, dragging and dropping the `LHSKeyboardAdjusting` fol
        [super viewWillDisappear:animated];
        [self lhs_deactivateKeyboardAdjustment];
    }
+
+   @end
    ```
 
-3. And you're done! Whenever a keyboard appears, your views will be automatically resized.
-
-### Contributing
-
-The only big feature I see missing is iOS 5 support, but otherwise I don't think much else is needed for this project. If you see a bug, please file an issue and I'll look into it right away.
+3. And you're done! Whenever a keyboard appears, this view will be automatically resized when a keyboard appears. If you need more pointers, clone this repo and check out the example project (LHSKeyboardAdjustingExample).
 
 ### License
 

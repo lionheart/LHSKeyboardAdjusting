@@ -44,6 +44,7 @@ static NSUInteger numRows = 50;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
 
     [self.view addSubview:self.tableView];
+
     [self.tableView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
     [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
     [self.tableView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;

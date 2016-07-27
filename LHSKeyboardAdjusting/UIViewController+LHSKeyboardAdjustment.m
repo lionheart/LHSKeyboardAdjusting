@@ -15,6 +15,7 @@
 //
 
 #import "UIViewController+LHSKeyboardAdjustment.h"
+#import "LHSKeyboardAdjusting.h"
 
 @implementation UIViewController (LHSKeyboardAdjustment)
 
@@ -23,7 +24,12 @@
 }
 
 - (void)lhs_activateKeyboardAdjustmentWithShow:(LHSKeyboardAdjustingBlock)show hide:(LHSKeyboardAdjustingBlock)hide {
-    self.keyboardAdjustingBottomConstraint = [self lhs_initializeKeyboardAdjustingConstraintForView:self.keyboardAdjustingView];
+    if ([self conformsToProtocol:@protocol(LHSKeyboardAdjusting)]) {
+        id<LHSKeyboardAdjusting> adjusting = (id<LHSKeyboardAdjusting>)self;
+        adjusting.keyboardAdjustingBottomConstraint = [self lhs_keyboardAdjustingConstraintForView:adjusting.keyboardAdjustingView];
+    } else {
+        NSAssert(NO, @"This object must conform to LHSKeyboardAdjusting to enable automatic keyboard adjustment.");
+    }
 
     [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillHideNotification
                                                       object:nil
@@ -108,7 +114,7 @@
     return NO;
 }
 
-- (NSLayoutConstraint *)lhs_initializeKeyboardAdjustingConstraintForView:(UIView *)theView {
+- (NSLayoutConstraint *)lhs_keyboardAdjustingConstraintForView:(UIView *)theView {
     if ([self.view respondsToSelector:@selector(bottomAnchor)]) {
         NSLayoutConstraint *constraint = [self.view.bottomAnchor constraintEqualToAnchor:theView.bottomAnchor];
         constraint.active = YES;

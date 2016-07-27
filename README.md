@@ -21,17 +21,11 @@ If you don't use CocoaPods, dragging and dropping the `LHSKeyboardAdjusting` fol
 
 ### Usage
 
-1. In your view controller's header file, import and assign the `LHSKeyboardAdjusting` protocol.
+1. In your view controller's header file, assign the `LHSKeyboardAdjusting` protocol to your class and define an `NSLayoutConstraint` property called `keyboardAdjustingBottomConstraint`.
 
    ```objc
    #import <LHSKeyboardAdjusting/LHSKeyboardAdjusting.h>
 
-   @interface ViewController : UIViewController <LHSKeyboardAdjusting>
-   ```
-
-2. Figure out which view you'd like to pin to the top of the keyboard. It could be anything, but a UIScrollView, UITableView, or a UITextView are the most likely candidates. Wherever you're setting up your view constraints, define an `NSLayoutConstraint` property called `keyboardAdjustingBottomConstraint`. In your public interface:
-
-   ```objc
    @interface ViewController : UIViewController <LHSKeyboardAdjusting>
 
    @property (nonatomic, strong) NSLayoutConstraint *keyboardAdjustingBottomConstraint;
@@ -39,7 +33,7 @@ If you don't use CocoaPods, dragging and dropping the `LHSKeyboardAdjusting` fol
    @end
    ```
 
-   Then, in your view controller, implement `keyboardAdjustingView` to return the view that should be pinned to the top of the keyboard.
+2. In your view controller, implement `keyboardAdjustingView` to return the view you'd like to pin to the top of the keyboard. It could be anything, but a UIScrollView, UITableView, or a UITextView are the most likely candidates.
 
    ```
    #pragma mark - LHSKeyboardAdjusting
@@ -63,7 +57,7 @@ If you don't use CocoaPods, dragging and dropping the `LHSKeyboardAdjusting` fol
    ```
    -->
 
-3. Finally, just activate and deactivate the automatic adjustments in `viewWillAppear` and `viewWillDisappear`.
+3. Activate and deactivate the automatic adjustments in `viewWillAppear` and `viewWillDisappear`.
 
    ```objc
    #import <LHSKeyboardAdjusting/UIViewController+LHSKeyboardAdjustment.h>

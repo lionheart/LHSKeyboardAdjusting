@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372D4B6F1D49094600470CF6 /* LHSKeyboardAdjustingExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 372D4B6E1D49094600470CF6 /* LHSKeyboardAdjustingExampleUITests.m */; };
 		3751E4DF1D48E2CD00571489 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3751E4DE1D48E2CD00571489 /* main.m */; };
 		3751E4E21D48E2CD00571489 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3751E4E11D48E2CD00571489 /* AppDelegate.m */; };
 		3751E4E51D48E2CD00571489 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3751E4E41D48E2CD00571489 /* ViewController.m */; };
@@ -16,7 +17,20 @@
 		F75DEC29FA6DA3245BA6660A /* libPods-LHSKeyboardAdjustingExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F4ED3042508BFA966D0B42 /* libPods-LHSKeyboardAdjustingExample.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		372D4B711D49094600470CF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3751E4D21D48E2CD00571489 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3751E4D91D48E2CD00571489;
+			remoteInfo = LHSKeyboardAdjustingExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		372D4B6C1D49094500470CF6 /* LHSKeyboardAdjustingExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LHSKeyboardAdjustingExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372D4B6E1D49094600470CF6 /* LHSKeyboardAdjustingExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHSKeyboardAdjustingExampleUITests.m; sourceTree = "<group>"; };
+		372D4B701D49094600470CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3751E4DA1D48E2CD00571489 /* LHSKeyboardAdjustingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHSKeyboardAdjustingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3751E4DE1D48E2CD00571489 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3751E4E01D48E2CD00571489 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		372D4B691D49094500470CF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3751E4D71D48E2CD00571489 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,10 +74,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		372D4B6D1D49094600470CF6 /* LHSKeyboardAdjustingExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				372D4B6E1D49094600470CF6 /* LHSKeyboardAdjustingExampleUITests.m */,
+				372D4B701D49094600470CF6 /* Info.plist */,
+			);
+			path = LHSKeyboardAdjustingExampleUITests;
+			sourceTree = "<group>";
+		};
 		3751E4D11D48E2CD00571489 = {
 			isa = PBXGroup;
 			children = (
 				3751E4DC1D48E2CD00571489 /* LHSKeyboardAdjustingExample */,
+				372D4B6D1D49094600470CF6 /* LHSKeyboardAdjustingExampleUITests */,
 				3751E4DB1D48E2CD00571489 /* Products */,
 				15138B93D39F49CFAAECCD56 /* Pods */,
 				94D638C21E1F66AE61EA6C4A /* Frameworks */,
@@ -67,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				3751E4DA1D48E2CD00571489 /* LHSKeyboardAdjustingExample.app */,
+				372D4B6C1D49094500470CF6 /* LHSKeyboardAdjustingExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +138,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		372D4B6B1D49094500470CF6 /* LHSKeyboardAdjustingExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372D4B731D49094600470CF6 /* Build configuration list for PBXNativeTarget "LHSKeyboardAdjustingExampleUITests" */;
+			buildPhases = (
+				372D4B681D49094500470CF6 /* Sources */,
+				372D4B691D49094500470CF6 /* Frameworks */,
+				372D4B6A1D49094500470CF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372D4B721D49094600470CF6 /* PBXTargetDependency */,
+			);
+			name = LHSKeyboardAdjustingExampleUITests;
+			productName = LHSKeyboardAdjustingExampleUITests;
+			productReference = 372D4B6C1D49094500470CF6 /* LHSKeyboardAdjustingExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		3751E4D91D48E2CD00571489 /* LHSKeyboardAdjustingExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3751E4F11D48E2CD00571489 /* Build configuration list for PBXNativeTarget "LHSKeyboardAdjustingExample" */;
@@ -135,6 +185,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Lionheart Software LLC";
 				TargetAttributes = {
+					372D4B6B1D49094500470CF6 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3751E4D91D48E2CD00571489;
+					};
 					3751E4D91D48E2CD00571489 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -154,11 +208,19 @@
 			projectRoot = "";
 			targets = (
 				3751E4D91D48E2CD00571489 /* LHSKeyboardAdjustingExample */,
+				372D4B6B1D49094500470CF6 /* LHSKeyboardAdjustingExampleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		372D4B6A1D49094500470CF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3751E4D81D48E2CD00571489 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +282,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		372D4B681D49094500470CF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372D4B6F1D49094600470CF6 /* LHSKeyboardAdjustingExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3751E4D61D48E2CD00571489 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,6 +301,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		372D4B721D49094600470CF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3751E4D91D48E2CD00571489 /* LHSKeyboardAdjustingExample */;
+			targetProxy = 372D4B711D49094600470CF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3751E4E61D48E2CD00571489 /* Main.storyboard */ = {
@@ -252,6 +330,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		372D4B741D49094600470CF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LHSKeyboardAdjustingExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.LHSKeyboardAdjustingExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LHSKeyboardAdjustingExample;
+			};
+			name = Debug;
+		};
+		372D4B751D49094600470CF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LHSKeyboardAdjustingExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lionheartsw.LHSKeyboardAdjustingExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LHSKeyboardAdjustingExample;
+			};
+			name = Release;
+		};
 		3751E4EF1D48E2CD00571489 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -363,6 +463,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		372D4B731D49094600470CF6 /* Build configuration list for PBXNativeTarget "LHSKeyboardAdjustingExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372D4B741D49094600470CF6 /* Debug */,
+				372D4B751D49094600470CF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3751E4D51D48E2CD00571489 /* Build configuration list for PBXProject "LHSKeyboardAdjustingExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

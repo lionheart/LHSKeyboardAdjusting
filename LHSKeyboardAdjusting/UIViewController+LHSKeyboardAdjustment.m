@@ -24,19 +24,31 @@
 @implementation UIViewController (LHSKeyboardAdjustment)
 
 - (void)lhs_activateKeyboardAdjustment {
-    [self lhs_activateKeyboardAdjustmentWithShow:nil hide:nil];
+    [self lhs_activateKeyboardAdjustmentWithShow:^{} hide:^{}];
 }
 
-- (void)lhs_activateKeyboardAdjustmentWithShow:(nullable LHSKeyboardAdjustingBlock)show hide:(nullable LHSKeyboardAdjustingBlock)hide {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(lhs_keyboardWillHide:)
-                                                 name:UIKeyboardWillHideNotification
-                                               object:hide];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(lhs_keyboardDidShow:)
-                                                 name:UIKeyboardDidShowNotification
-                                               object:show];
+- (void)lhs_activateKeyboardAdjustmentWithShow:(LHSKeyboardAdjustingBlock)show hide:(LHSKeyboardAdjustingBlock)hide {
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillHideNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue currentQueue]
+                                                  usingBlock:^(NSNotification * _Nonnull note) {
+                                                      if (hide) {
+                                                          hide();
+                                                      }
+
+                                                      [self lhs_keyboardWillHide:note];
+                                                  }];
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardDidShowNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue currentQueue]
+                                                  usingBlock:^(NSNotification * _Nonnull note) {
+                                                      if (show) {
+                                                          show();
+                                                      }
+
+                                                      [self lhs_keyboardDidShow:note];
+                                                  }];
 }
 
 - (void)lhs_deactivateKeyboardAdjustment {
@@ -49,11 +61,6 @@
     NSAssert(enabled, @"keyboardAdjustingBottomConstraint must be implemented to enable automatic keyboard adjustment.");
     
     if (enabled) {
-        LHSKeyboardAdjustingBlock block = sender.object;
-        if (block) {
-            block();
-        }
-        
         NSDictionary *userInfo = sender.userInfo;
         NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
         UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
@@ -76,11 +83,6 @@
     NSAssert(enabled, @"keyboardAdjustingBottomConstraint must be implemented to enable automatic keyboard adjustment.");
     
     if (enabled) {
-        LHSKeyboardAdjustingBlock block = sender.object;
-        if (block) {
-            block();
-        }
-        
         CGRect frame = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
         CGRect keyboardFrameInViewCoordinates = [self.view convertRect:frame fromView:nil];
         NSDictionary *userInfo = sender.userInfo;

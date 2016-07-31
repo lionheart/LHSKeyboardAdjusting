@@ -60,54 +60,46 @@
 }
 
 - (void)lhs_keyboardWillHide:(NSNotification *)sender {
-    BOOL enabled = [self respondsToSelector:@selector(keyboardAdjustingBottomConstraint)];
+    BOOL enabled = [self conformsToProtocol:@protocol(LHSKeyboardAdjusting)];
     NSAssert(enabled, @"keyboardAdjustingBottomConstraint must be implemented to enable automatic keyboard adjustment.");
-    
-    if (enabled) {
-        NSDictionary *userInfo = sender.userInfo;
-        NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-        UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
 
-        self.keyboardAdjustingBottomConstraint.constant = 0;
-        if (self.keyboardAdjustingAnimated) {
-            UIViewAnimationOptions options = UIViewAnimationOptionBeginFromCurrentState | curve;
-            [UIView animateWithDuration:duration delay:0 options:options animations:^{
-                [self.view layoutIfNeeded];
-            } completion:nil];
-        }
-        else {
+    id<LHSKeyboardAdjusting> adjusting = (id<LHSKeyboardAdjusting>)self;
+
+    NSDictionary *userInfo = sender.userInfo;
+    NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+
+    adjusting.keyboardAdjustingBottomConstraint.constant = 0;
+    if (adjusting.keyboardAdjustingAnimated) {
+        UIViewAnimationOptions options = UIViewAnimationOptionBeginFromCurrentState | curve;
+        [UIView animateWithDuration:duration delay:0 options:options animations:^{
             [self.view layoutIfNeeded];
-        }
+        } completion:nil];
+    } else {
+        [self.view layoutIfNeeded];
     }
 }
 
 - (void)lhs_keyboardDidShow:(NSNotification *)sender {
-    BOOL enabled = [self respondsToSelector:@selector(keyboardAdjustingBottomConstraint)];
+    BOOL enabled = [self conformsToProtocol:@protocol(LHSKeyboardAdjusting)];
     NSAssert(enabled, @"keyboardAdjustingBottomConstraint must be implemented to enable automatic keyboard adjustment.");
-    
-    if (enabled) {
-        CGRect frame = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-        CGRect keyboardFrameInViewCoordinates = [self.view convertRect:frame fromView:nil];
-        NSDictionary *userInfo = sender.userInfo;
-        NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-        UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
 
-        self.keyboardAdjustingBottomConstraint.constant = CGRectGetHeight(self.view.bounds) - keyboardFrameInViewCoordinates.origin.y;
+    id<LHSKeyboardAdjusting> adjusting = (id<LHSKeyboardAdjusting>)self;
 
-        if (self.keyboardAdjustingAnimated) {
-            [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
-                [self.view layoutIfNeeded];
-            } completion:nil];
-        }
-        else {
+    CGRect frame = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGRect keyboardFrameInViewCoordinates = [self.view convertRect:frame fromView:nil];
+    NSDictionary *userInfo = sender.userInfo;
+    NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+
+    adjusting.keyboardAdjustingBottomConstraint.constant = CGRectGetHeight(self.view.bounds) - keyboardFrameInViewCoordinates.origin.y;
+    if (adjusting.keyboardAdjustingAnimated) {
+        [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
             [self.view layoutIfNeeded];
-        }
+        } completion:nil];
+    } else {
+        [self.view layoutIfNeeded];
     }
-}
-
-- (nullable NSLayoutConstraint *)keyboardAdjustingBottomConstraint {
-    [NSException raise:NSInternalInconsistencyException format:@"'%@' must override -keyboardAdjustingBottomConstraint", NSStringFromClass(self.class)];
-    return nil;
 }
 
 - (BOOL)keyboardAdjustingAnimated {

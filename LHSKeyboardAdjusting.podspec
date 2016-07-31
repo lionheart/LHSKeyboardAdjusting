@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LHSKeyboardAdjusting"
-  s.version      =  "2.0.1"
+  s.version      = "2.0.1"
   s.summary      = "An easy-to-use utility that will automatically resize views whenever a keyboard appears"
   s.homepage     = "http://lionheartsw.com/"
   s.license      = 'Apache 2.0'
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.social_media_url = "http://twitter.com/dwlz"
   s.platform     = :ios, '6.0'
 
-  s.source       = { :git => "https://github.com/lionheart/LHSKeyboardAdjusting.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/lionheart/LHSKeyboardAdjusting.git", :tag => "v#{s.version.to_s}" }
 
   s.source_files  = 'LHSKeyboardAdjusting/**/*.{h,m}'
 

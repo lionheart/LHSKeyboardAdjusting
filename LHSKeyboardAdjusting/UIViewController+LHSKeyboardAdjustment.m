@@ -63,20 +63,22 @@
     BOOL enabled = [self conformsToProtocol:@protocol(LHSKeyboardAdjusting)];
     NSAssert(enabled, @"keyboardAdjustingBottomConstraint must be implemented to enable automatic keyboard adjustment.");
 
-    id<LHSKeyboardAdjusting> adjusting = (id<LHSKeyboardAdjusting>)self;
+    if (enabled) {
+        id<LHSKeyboardAdjusting> adjusting = (id<LHSKeyboardAdjusting>)self;
 
-    NSDictionary *userInfo = sender.userInfo;
-    NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+        NSDictionary *userInfo = sender.userInfo;
+        NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+        UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
 
-    adjusting.keyboardAdjustingBottomConstraint.constant = 0;
-    if (adjusting.keyboardAdjustingAnimated) {
-        UIViewAnimationOptions options = UIViewAnimationOptionBeginFromCurrentState | curve;
-        [UIView animateWithDuration:duration delay:0 options:options animations:^{
+        adjusting.keyboardAdjustingBottomConstraint.constant = 0;
+        if (adjusting.keyboardAdjustingAnimated) {
+            UIViewAnimationOptions options = UIViewAnimationOptionBeginFromCurrentState | curve;
+            [UIView animateWithDuration:duration delay:0 options:options animations:^{
+                [self.view layoutIfNeeded];
+            } completion:nil];
+        } else {
             [self.view layoutIfNeeded];
-        } completion:nil];
-    } else {
-        [self.view layoutIfNeeded];
+        }
     }
 }
 
@@ -84,21 +86,23 @@
     BOOL enabled = [self conformsToProtocol:@protocol(LHSKeyboardAdjusting)];
     NSAssert(enabled, @"keyboardAdjustingBottomConstraint must be implemented to enable automatic keyboard adjustment.");
 
-    id<LHSKeyboardAdjusting> adjusting = (id<LHSKeyboardAdjusting>)self;
+    if (enabled) {
+        id<LHSKeyboardAdjusting> adjusting = (id<LHSKeyboardAdjusting>)self;
 
-    CGRect frame = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    CGRect keyboardFrameInViewCoordinates = [self.view convertRect:frame fromView:nil];
-    NSDictionary *userInfo = sender.userInfo;
-    NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+        CGRect frame = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+        CGRect keyboardFrameInViewCoordinates = [self.view convertRect:frame fromView:nil];
+        NSDictionary *userInfo = sender.userInfo;
+        NSTimeInterval duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+        UIViewAnimationCurve curve = (UIViewAnimationCurve) [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
 
-    adjusting.keyboardAdjustingBottomConstraint.constant = CGRectGetHeight(self.view.bounds) - keyboardFrameInViewCoordinates.origin.y;
-    if (adjusting.keyboardAdjustingAnimated) {
-        [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
+        adjusting.keyboardAdjustingBottomConstraint.constant = CGRectGetHeight(self.view.bounds) - keyboardFrameInViewCoordinates.origin.y;
+        if (adjusting.keyboardAdjustingAnimated) {
+            [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState | curve animations:^{
+                [self.view layoutIfNeeded];
+            } completion:nil];
+        } else {
             [self.view layoutIfNeeded];
-        } completion:nil];
-    } else {
-        [self.view layoutIfNeeded];
+        }
     }
 }
 
